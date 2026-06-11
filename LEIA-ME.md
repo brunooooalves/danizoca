@@ -6,11 +6,11 @@
 
 | Arquivo | Qual foto |
 |---|---|
-| `foto1.jpg` | Vocês dois vendo o pôr do sol sobre a cidade (vira o fundo do site) |
-| `foto2.jpg` | Beijo em preto e branco com fogos de artifício |
-| `foto3.jpg` | Beijo na prancha no meio do mar |
-| `foto4.jpg` | As fotos de cabine (photobooth) |
-| `foto5.jpg` | Dani admirando a praia com a flor no cabelo |
+| `foto1.png` | Vocês dois vendo o pôr do sol sobre a cidade (vira o fundo do site) |
+| `foto2.png` | Beijo em preto e branco com fogos de artifício |
+| `foto3.png` | Beijo na prancha no meio do mar |
+| `foto4.png` | As fotos de cabine (photobooth) |
+| `foto5.png` | Dani admirando a praia com a flor no cabelo |
 
 ### 2. Coloque a data de início do namoro
 
