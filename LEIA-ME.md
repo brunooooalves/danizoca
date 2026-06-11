@@ -1,4 +1,4 @@
-# Site para a Dani ❤
+# Site para a Vidoka ❤
 
 ## Como deixar tudo pronto (2 passos)
 

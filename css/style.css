@@ -181,16 +181,10 @@ section {
 
 .hero-title {
   font-family: var(--fonte-script);
-  font-size: clamp(5.5rem, 18vw, 12rem);
+  font-size: clamp(4.2rem, 15vw, 9.5rem);
   font-weight: 400;
   line-height: 1;
   margin: 6px 0 12px;
-  background: linear-gradient(90deg, #fff, var(--rosa-claro), var(--dourado), #fff);
-  background-size: 300% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: brilho-texto 5s linear infinite;
   filter: drop-shadow(0 4px 20px rgba(255, 107, 157, 0.55));
 }
 
@@ -198,11 +192,20 @@ section {
   to { background-position: 300% center; }
 }
 
+/* o gradiente fica em cada letra: background-clip no pai não
+   alcança filhos animados com transform (camadas compostas) */
 .hero-title span {
   display: inline-block;
+  background: linear-gradient(90deg, #fff, var(--rosa-claro), var(--dourado), #fff);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
   transform: translateY(50px) rotate(8deg);
-  animation: letra-entra 0.9s cubic-bezier(0.2, 0.8, 0.2, 1.2) forwards;
+  animation:
+    letra-entra 0.9s cubic-bezier(0.2, 0.8, 0.2, 1.2) forwards,
+    brilho-texto 5s linear infinite;
   animation-delay: var(--d);
 }
 
@@ -734,14 +737,5 @@ section {
   .contador-item {
     min-width: 120px;
     flex: 1 1 40%;
-  }
-}
-
-/* respeita quem prefere menos animação */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
   }
 }
